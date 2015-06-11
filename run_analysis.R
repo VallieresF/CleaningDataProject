@@ -50,6 +50,7 @@ har.Unpivot <- merge(har.Unpivot, activities, by = "ActivityCode")
 # We retain the measures only for the chosen features (mean and std)
 har.Keep <- merge(har.Unpivot, features.Keep, by = "variable")
 har.Keep$retenir <- NULL
+har.Keep$variable <- NULL
 
 # We aggregate the measures to answer the 5th questions: 
 # average by each retain measures (feature) and activities and subject
